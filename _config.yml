@@ -26,11 +26,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nqn7mi-mylove.github.io" # the base hostname & protocol for your site
 github_username: Nqn7mi
 author: Nqn7mi
-avatar: /assets/img/avatar.jpg # 你需要添加一个头像图片
-reward: false
+avatar: /assets/imgs/avatar.jpg
 
-# 删除主题设置，因为我们直接使用模板文件
-# theme: oukohou
+# 主题设置
+remote_theme: oukohou/oukohou.github.io
 
 # Build settings
 markdown: kramdown
@@ -46,6 +45,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-remote-theme
 
 # 分页设置
 paginate: 10
@@ -57,3 +57,14 @@ disqus_shortname: # 你的disqus账号
 
 # Google Analytics（可选）
 google_analytics: # 你的Google Analytics跟踪ID
+
+# 导航菜单
+navigation:
+  - title: 首页
+    url: /
+  - title: 归档
+    url: /archives/
+  - title: 分类
+    url: /categories/
+  - title: 关于
+    url: /about/

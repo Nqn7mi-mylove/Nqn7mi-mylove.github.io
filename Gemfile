@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 # 使用 github-pages 而不是 jekyll
 gem "github-pages", group: :jekyll_plugins
+gem "jekyll-remote-theme"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
