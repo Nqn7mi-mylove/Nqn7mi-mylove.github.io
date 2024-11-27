@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3.4"
+# 使用 github-pages 而不是 jekyll
+gem "github-pages", group: :jekyll_plugins
 
-# 添加必要的插件
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-seo-tag"
