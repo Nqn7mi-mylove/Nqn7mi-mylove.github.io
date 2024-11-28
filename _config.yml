@@ -18,10 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: My Personal Blog
-email: nightrav3n@foxmail.com
+title: Nqn7mi's Blog
+subtitle: 个人博客
+keywords: blog, 博客, 编程
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my personal blog where I share my thoughts and experiences.
+  这里是 Nqn7mi 的个人博客，主要分享编程、算法和生活感悟。
+email: nightrav3n@foxmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nqn7mi-mylove.github.io" # the base hostname & protocol for your site
 github_username: Nqn7mi

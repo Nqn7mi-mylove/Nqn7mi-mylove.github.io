@@ -8,18 +8,12 @@ Yet no award for you……
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-
-<!--    &lt;!&ndash;Google Adsense, details at: "https://www.google.com/adsense/new/u/0/pub-3980406043325966/home" &ndash;&gt;-->
-<!--    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-<!--    <script>-->
-<!--        (adsbygoogle = window.adsbygoogle || []).push({-->
-<!--            google_ad_client: "ca-pub-3980406043325966",-->
-<!--            enable_page_level_ads: true-->
-<!--        });-->
-<!--    </script>-->
-
-
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ site.baseurl }}/assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/imgs/apple-touch-icon.png">
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -54,49 +48,17 @@ Yet no award for you……
     <!-- End Google Tag Manager -->
 
 
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
-    <meta content="telephone=no" name="format-detection">
-
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} | {{ site.subtitle}}</title>
-
-    <!--live2d function-->
-    <script src="/assets/live2dw/lib/L2Dwidget.min.js"></script>
-    <script>L2Dwidget.init({
-        "pluginRootPath": "live2dw/",
-        "pluginJsPath": "lib/",
-        "pluginModelPath": "assets/",
-        "tagMode": false,
-        "debug": false,
-        "model": {"jsonPath": "/assets/live2dw/assets/unitychan.model.json"},
-        "display": {"position": "right", "width": 130, "height": 180, "hOffset": 60, "vOffset": -10,},
-        "mobile": {"show": true, "scale": 1,},
-        "log": false
-    });</script>
-
-
-    <meta name="keywords"
-          content="{% if page.keywords %}{{ page.keywords | split: ' ' | join: ', ' }}{% else %}{{ site.keywords }}{% endif %}">
-    <meta name="description"
-          content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ',' }}{% else %}{{ site.keywords }}{% endif %}">
     <meta name="baidu-site-verification" content="fjE6fa4d3J"/>
     <meta name="author" content="{{ site.author }}">
 
-    <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="/favicon.png">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "
-    /feed.xml" | prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/grids-responsive-min.css">
 
-    <link rel="stylesheet" type="text/css" href="{{ "
-    /assets/css/normalize.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" type="text/css" href="{{ "
-    /assets/css/pure-min.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" type="text/css" href="{{ "
-    /assets/css/grids-responsive-min.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" type="text/css" href="{{ "
-    /assets/css/style.css?v=1514870841" | prepend: site.baseurl }}">
 
     <!--use mathJax to edit formulas in LaTex grammar.-->
     <script type="text/x-mathjax-config">
