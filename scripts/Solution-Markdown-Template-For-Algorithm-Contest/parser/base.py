@@ -149,6 +149,10 @@ date: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")} +0800
         # 生成文件名：YYYY-MM-DD-ABCXXX.md
         date_prefix = datetime.now().strftime("%Y-%m-%d")
         contest_id = self.get_contest_number()
+        contest_id = contest_id.replace("AtCoder Beginner Contest ", "ABC");
+        contest_id = contest_id.replace("AtCoder Regular Contest ", "ARC");
+        contest_id = contest_id.replace("AtCoder Grand Contest ", "AGC");
+        contest_id = contest_id.replace(" Solution", "");
         filename = f"{date_prefix}-{contest_id}.md"
         filepath = os.path.join(self.output_dir, filename)
         
