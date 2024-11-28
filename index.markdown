@@ -8,36 +8,38 @@ layout: base
 <div class="main-content index-page clearfix">
     <div class="post-list">
         {% for post in site.posts %}
-        <article class="post-card">
-            <div class="post-card-header">
-                <h2 class="post-card-title">
-                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-            </div>
-            <div class="post-card-content">
-                <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-            </div>
-            <div class="post-card-meta">
-                <span class="post-date">
-                    <i class="fa fa-calendar"></i>
-                    {{ post.date | date: '%Y-%m-%d' }}
-                </span>
-                {% if post.categories.size > 0 %}
-                <span class="post-categories">
-                    <i class="fa fa-folder"></i>
-                    {% for category in post.categories %}
-                        <a href="{{ site.baseurl }}/category/#{{ category }}">{{ category }}</a>
-                    {% endfor %}
-                </span>
-                {% endif %}
-                {% if post.tags.size > 0 %}
-                <span class="post-tags">
-                    <i class="fa fa-tags"></i>
-                    {% for tag in post.tags %}
-                        <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>
-                    {% endfor %}
-                </span>
-                {% endif %}
+        <article class="post-item">
+            <div class="post-item-wrapper">
+                <div class="post-item-header">
+                    <h2 class="post-item-title">
+                        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </h2>
+                </div>
+                <div class="post-item-meta">
+                    <span class="post-date">
+                        <i class="fa fa-calendar"></i>
+                        {{ post.date | date: '%Y-%m-%d' }}
+                    </span>
+                    {% if post.categories.size > 0 %}
+                    <span class="post-categories">
+                        <i class="fa fa-folder"></i>
+                        {% for category in post.categories %}
+                            <a href="{{ site.baseurl }}/category/#{{ category }}">{{ category }}</a>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                    {% if post.tags.size > 0 %}
+                    <span class="post-tags">
+                        <i class="fa fa-tags"></i>
+                        {% for tag in post.tags %}
+                            <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </div>
+                <div class="post-item-content">
+                    <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                </div>
             </div>
         </article>
         {% endfor %}

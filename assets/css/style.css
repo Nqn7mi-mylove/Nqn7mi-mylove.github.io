@@ -1245,62 +1245,55 @@ ul {
 
 /* Post List Styles */
 .post-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.post-card {
+.post-item {
+    margin-bottom: 2rem;
+}
+
+.post-item-wrapper {
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    position: relative;
-    padding: 1.5rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+.post-item-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.post-card-header {
+.post-item-header {
     margin-bottom: 1rem;
 }
 
-.post-card-title {
-    font-size: 1.4rem;
+.post-item-title {
+    font-size: 1.6rem;
     margin: 0;
     line-height: 1.4;
 }
 
-.post-card-title a {
+.post-item-title a {
     color: #333;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.post-card-title a:hover {
+.post-item-title a:hover {
     color: #0066cc;
 }
 
-.post-card-content {
+.post-item-meta {
+    font-size: 0.9rem;
     color: #666;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.post-card-meta {
-    font-size: 0.85rem;
-    color: #888;
+    margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
-    margin-top: auto;
 }
 
 .post-date, .post-categories, .post-tags {
@@ -1309,17 +1302,22 @@ ul {
     gap: 0.5rem;
 }
 
-.post-card-meta i {
-    font-size: 0.9rem;
+.post-item-meta i {
     color: #999;
 }
 
-.post-card-meta a {
+.post-item-meta a {
     color: #666;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.post-card-meta a:hover {
+.post-item-meta a:hover {
     color: #0066cc;
+}
+
+.post-item-content {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
 }
