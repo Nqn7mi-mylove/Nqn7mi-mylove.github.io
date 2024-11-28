@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Nqn7mi's Blog
-subtitle: 个人博客
+subtitle: 清渠的个人博客
 keywords: blog, 博客, 编程
 description: >- # this means to ignore newlines until "baseurl:"
   这里是 Nqn7mi 的个人博客，主要分享编程、算法和生活感悟。

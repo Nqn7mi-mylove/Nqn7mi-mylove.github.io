@@ -3,21 +3,32 @@ layout: base
 title: 分类
 ---
 
-<div class="main-content category-page clearfix">
-    <div class="categories">
+<div class="main-content category-page">
+    <div class="post-list">
         {% for category in site.categories %}
-        <h2 class="category" id="{{ category | first }}">{{ category | first }}</h2>
-        <div class="post-list">
-            {% for posts in category %}
-                {% for post in posts %}
-                    {% if post.url %}
-                    <div class="post-item">
-                        <div class="post-time">{{ post.date | date: "%m-%d" }}</div>
-                        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a>
-                    </div>
-                    {% endif %}
+        <div class="category-section">
+            <h2 class="category-title" id="{{ category | first }}">{{ category | first }}</h2>
+            <div class="post-items">
+                {% for posts in category %}
+                    {% for post in posts %}
+                        {% if post.url %}
+                        <div class="post-item">
+                            <div class="post-item-wrapper">
+                                <h3 class="post-item-title">
+                                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                                </h3>
+                                <div class="post-item-meta">
+                                    <span class="post-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        {{ post.date | date: "%Y-%m-%d" }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
-            {% endfor %}
+            </div>
         </div>
         {% endfor %}
     </div>

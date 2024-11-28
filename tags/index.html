@@ -3,21 +3,32 @@ layout: base
 title: 标签
 ---
 
-<div class="main-content tag-page clearfix">
-    <div class="tags">
+<div class="main-content tag-page">
+    <div class="post-list">
         {% for tag in site.tags %}
-        <h2 class="tag" id="{{ tag | first }}">{{ tag | first }}</h2>
-        <div class="post-list">
-            {% for posts in tag %}
-                {% for post in posts %}
-                    {% if post.url %}
-                    <div class="post-item">
-                        <div class="post-time">{{ post.date | date: "%m-%d" }}</div>
-                        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a>
-                    </div>
-                    {% endif %}
+        <div class="tag-section">
+            <h2 class="tag-title" id="{{ tag | first }}">{{ tag | first }}</h2>
+            <div class="post-items">
+                {% for posts in tag %}
+                    {% for post in posts %}
+                        {% if post.url %}
+                        <div class="post-item">
+                            <div class="post-item-wrapper">
+                                <h3 class="post-item-title">
+                                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                                </h3>
+                                <div class="post-item-meta">
+                                    <span class="post-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        {{ post.date | date: "%Y-%m-%d" }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
-            {% endfor %}
+            </div>
         </div>
         {% endfor %}
     </div>
