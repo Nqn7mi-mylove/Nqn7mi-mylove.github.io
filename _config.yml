@@ -55,6 +55,28 @@ disqus_shortname: # 你的disqus账号
 google_analytics: # 你的Google Analytics跟踪ID
 
 # 导航菜单
+menu:
+  -
+    page: 主页
+    directory: 
+    icon: icon-home
+  -
+    page: 归档
+    directory: archives/
+    icon: icon-archive
+  -
+    page: 分类
+    directory: category/
+    icon: icon-category
+  -
+    page: 标签
+    directory: tags/
+    icon: icon-tags
+  -
+    page: 关于
+    directory: about/
+    icon: icon-about
+
 navigation:
   - title: 首页
     url: /
@@ -70,6 +92,10 @@ social:
   github: https://github.com/Nqn7mi
   email: nightrav3n@foxmail.com
 
-# 其他设置
+# 摘要相关配置
 excerpt_separator: <!--more-->
+excerpt_length: 150    # 摘要的最大字符数
+show_excerpts: true   # 在首页显示摘要
+
+# 其他设置
 future: true

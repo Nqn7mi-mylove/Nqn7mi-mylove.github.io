@@ -1231,25 +1231,6 @@ table tr:nth-child(2n) {
     margin: 0 0 0.8em;
 }
 
-#donate button {
-    color: #F2F2F2;
-    font-size: 14px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-shadow: rgb(233, 235, 230) 2px 3px 5px 0px;
-    border-width: 2px;
-    border-color: rgb(233, 235, 230);
-    border-style: solid;
-    border-radius: 10px;
-    background-color: #949494;
-}
-
-#donate button:hover {
-    background-color: #878787;
-}
-
 .hide {
     display: none;
 }
@@ -1260,4 +1241,85 @@ ul {
     overflow: auto;
 }
 
+}
+
+/* Post List Styles */
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.post-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post-card-header {
+    margin-bottom: 1rem;
+}
+
+.post-card-title {
+    font-size: 1.4rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.post-card-title a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.post-card-title a:hover {
+    color: #0066cc;
+}
+
+.post-card-content {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.post-card-meta {
+    font-size: 0.85rem;
+    color: #888;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-top: auto;
+}
+
+.post-date, .post-categories, .post-tags {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post-card-meta i {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.post-card-meta a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.post-card-meta a:hover {
+    color: #0066cc;
 }
