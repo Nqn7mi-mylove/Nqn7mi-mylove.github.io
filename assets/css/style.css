@@ -1251,23 +1251,24 @@ ul {
 }
 
 .post-item {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.post-item:last-child {
+    border-bottom: none;
 }
 
 .post-item-wrapper {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
     box-sizing: border-box;
+    padding: 0 0 2rem 0;
+    transition: transform 0.2s ease;
 }
 
 .post-item-wrapper:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .post-item-header {
@@ -1293,7 +1294,7 @@ ul {
 .post-item-meta {
     font-size: 0.9rem;
     color: #666;
-    margin-bottom: 1rem;
+    margin: 0.8rem 0;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
